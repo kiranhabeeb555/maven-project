@@ -96,15 +96,15 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <id>kiran-release</id>
+	      <name>kiran-release</name>
 	      <url>http://13.235.103.222:8081/repository/kiran-release/</url>
 		<layout>default</layout>    
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <id>kiran-snapshot</id>
+	      <name>kiran-snapshot</name>
 	      <url>http://13.235.103.222:8081/repository/kiran-snapshot/</url>
 	    </snapshotRepository>
 	    
