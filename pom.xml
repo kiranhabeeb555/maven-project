@@ -99,7 +99,6 @@
 	      <id>nexus</id>
 	      <name>kiran-release</name>
 	      <url>http://13.235.103.222:8081/repository/kiran-release/</url>
-		<layout>default</layout>    
 	    </repository>
 	    
 	    <snapshotRepository>
