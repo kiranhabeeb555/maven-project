@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    
+    tools{
+ maven "Maven3.8.5"
+}
+
+    stages {
+        stage('CodeCheckOut') {
+            steps {
+                git branch: 'development', credentialsId: '7459f130-7466-4664-bfe9-921cef66e5a4', url: 'https://github.com/kiranhabeeb555/maven-project.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        stage(SonarReport) {
+            steps {
+                tool name: 'SonarQube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+                sh "mvn sonar:sonar"
+            }
+        }
+        stage('UploadToArtifact') {
+            steps {
+                sh "mvn deploy"
+            }
+        }
+        stage('DeployToTomcat') {
+            steps {
+                sshagent(['ec2-user']) {
+                  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.110.224.217:/opt/apache-tomcat-9.0.68/webapps/"
+                 }
+            }
+        }    
+
+ }//stages closing
+}//pipeline closing
