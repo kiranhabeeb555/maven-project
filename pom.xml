@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://35.154.185.79:9000/</sonar.host.url>
+		<sonar.host.url>http://3.110.105.193:9000/</sonar.host.url>
                 <sonar.login>squ_457eb6c4afcc57dbfafef42f048198525e9b17f8</sonar.login>
 	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>kiran-release</name>
-	      <url>http://13.235.103.222:8081/repository/kiran-release/</url>
+	      <url>http://13.233.140.123:8081/repository/kiran-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>kiran-snapshot</name>
-	      <url>http://13.235.103.222:8081/repository/kiran-snapshot/</url>
+	      <url>http://13.233.140.123:8081/repository/kiran-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
